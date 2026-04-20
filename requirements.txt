@@ -6,4 +6,6 @@ python-docx
 google-genai
 numpy
 python-dotenv
+httpx
+beautifulsoup4
 sentence-transformers

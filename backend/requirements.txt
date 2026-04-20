@@ -6,3 +6,5 @@ python-docx
 google-genai
 numpy
 python-dotenv
+httpx
+beautifulsoup4
