@@ -1,0 +1,6 @@
+Name: John Doe
+Experience:
+- Full-stack Software Engineer at Tech Corp for 5 years
+- Excellent Python, JavaScript, and FastAPI skills
+- Machine Learning models integration, CI/CD, AWS
+- Agile team lead

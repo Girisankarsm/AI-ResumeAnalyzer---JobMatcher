@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Mate - Your AI Career Coach</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="cosmic-bg">
+        <div class="gradient-1"></div>
+        <div class="gradient-2"></div>
+        <div class="gradient-3"></div>
+        <div class="floating-card card-1"></div>
+        <div class="floating-card card-2"></div>
+        <div class="floating-card card-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Resume<strong>Mate</strong></span>
+            </div>
+            <div class="nav-items">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#analyzer">Analyzer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="features">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Land Your <span class="gradient-text">Dream Job</span>
+                <br>with AI-Powered Resume Optimization
+            </h1>
+            <p class="hero-subtitle">
+                Get real-time feedback on your resume with our intelligent AI assistant. 
+                Know exactly what recruiters are looking for.
+            </p>
+            <a href="#analyzer" class="cta-button">
+                <span>Start Analyzing</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Showcase -->
+    <section class="features-showcase">
+        <h2>What Makes ResumeMate Different</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI-Powered Analysis</h3>
+                <p>Machine learning embeddings that understand context, not just keywords</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>ATS Optimization</h3>
+                <p>Ensure your resume passes through Applicant Tracking Systems</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Skill Gap Analysis</h3>
+                <p>Identify missing skills and get actionable recommendations</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Interview Prep</h3>
+                <p>Get prepared with personalized interview guidance and tips</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Resume Strength</h3>
+                <p>Get a comprehensive quality audit of your entire resume</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Instant Feedback</h3>
+                <p>Get results in seconds, not hours. Real-time analysis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <h2>How It Works in 3 Steps</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload Your Resume</h3>
+                <p>Drop your resume in PDF, Word, or Text format. We'll extract all the important details.</p>
+            </div>
+            <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Paste Job Description</h3>
+                <p>Copy and paste the job listing you're applying for. The more details, the better!</p>
+            </div>
+            <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get AI-Powered Insights</h3>
+                <p>Receive detailed analysis with scores, gaps, and actionable recommendations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Analyzer Section -->
+    <section class="analyzer-section" id="analyzer">
+        <div class="analyzer-container">
+            <!-- Left Panel: Input -->
+            <div class="input-panel">
+                <h2>Resume Analysis Tool</h2>
+                <p class="panel-subtitle">Upload your resume and job description to get started</p>
+                
+                <form id="analyze-form">
+                    <!-- Resume Upload -->
+                    <div class="form-group">
+                        <label for="resume" class="form-label">
+                            <i class="fas fa-file-upload"></i> Upload Resume
+                        </label>
+                        <div class="file-drop-zone" id="drop-zone">
+                            <div class="drop-icon">
+                                <i class="fas fa-cloud-arrow-up"></i>
+                            </div>
+                            <p id="file-name">Drag & drop or click to upload</p>
+                            <small>Supports PDF, Word, and Text files</small>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.txt,.docx" required>
+                        </div>
+                    </div>
+
+                    <!-- Job Description -->
+                    <div class="form-group">
+                        <label for="jd" class="form-label">
+                            <i class="fas fa-briefcase"></i> Job Description
+                        </label>
+                        <textarea id="jd" name="jd" placeholder="Paste the complete job description here..." required></textarea>
+                        <small class="char-count"><span id="char-count">0</span> characters</small>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="submit-button">
+                        <span>Analyze Resume</span>
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </button>
+                </form>
+
+                <!-- Trust Badges -->
+                <div class="trust-section">
+                    <p><i class="fas fa-lock"></i> Your data is private and secure</p>
+                    <p><i class="fas fa-lightning-bolt"></i> Analysis in under 5 seconds</p>
+                </div>
+            </div>
+
+            <!-- Right Panel: Results -->
+            <div class="results-panel" id="results-panel" style="display: none;">
+                
+                <!-- Loading State -->
+                <div id="loader" class="loading-state">
+                    <div class="loader-animation">
+                        <div class="loader-dot"></div>
+                        <div class="loader-dot"></div>
+                        <div class="loader-dot"></div>
+                    </div>
+                    <h3>Analyzing Your Resume...</h3>
+                    <p>Our AI is comparing your resume with the job description</p>
+                </div>
+
+                <!-- Results Container -->
+                <div id="results-container" style="display: none;">
+                    <!-- Tab Navigation -->
+                    <div class="results-tabs">
+                        <button class="tab-btn active" data-tab="overview">
+                            <i class="fas fa-chart-pie"></i> Overview
+                        </button>
+                        <button class="tab-btn" data-tab="skills">
+                            <i class="fas fa-code"></i> Skills
+                        </button>
+                        <button class="tab-btn" data-tab="ats">
+                            <i class="fas fa-robot"></i> ATS
+                        </button>
+                        <button class="tab-btn" data-tab="strength">
+                            <i class="fas fa-star"></i> Strength
+                        </button>
+                        <button class="tab-btn" data-tab="interview">
+                            <i class="fas fa-handshake"></i> Interview
+                        </button>
+                    </div>
+
+                    <!-- Tab Contents -->
+                    
+                    <!-- Overview Tab -->
+                    <div class="tab-panel active" id="overview-tab">
+                        <div class="overview-header">
+                            <div class="match-score-container">
+                                <div class="circular-score">
+                                    <svg viewBox="0 0 200 200">
+                                        <circle class="score-bg" cx="100" cy="100" r="90"/>
+                                        <circle class="score-ring" id="score-circle" cx="100" cy="100" r="90"/>
+                                    </svg>
+                                    <div class="score-text">
+                                        <span id="match-score">0</span>%
+                                    </div>
+                                </div>
+                                <div class="score-label">
+                                    <h3>Overall Match</h3>
+                                    <p id="match-label">Analyzing...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metrics-cards">
+                            <div class="metric-card ats-card">
+                                <h4><i class="fas fa-robot"></i> ATS Score</h4>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" id="ats-fill"></div>
+                                </div>
+                                <p><span id="ats-score">0</span>/100</p>
+                            </div>
+                            <div class="metric-card strength-card">
+                                <h4><i class="fas fa-dumbbell"></i> Strength</h4>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" id="strength-fill"></div>
+                                </div>
+                                <p><span id="strength-score">0</span>/100</p>
+                            </div>
+                            <div class="metric-card skills-card">
+                                <h4><i class="fas fa-code"></i> Skills</h4>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" id="skills-fill"></div>
+                                </div>
+                                <p><span id="skill-coverage">0</span>%</p>
+                            </div>
+                        </div>
+
+                        <div class="insight-boxes">
+                            <div class="insight-box positive">
+                                <h4><i class="fas fa-star"></i> Your Strengths</h4>
+                                <ul id="strengths-list"></ul>
+                            </div>
+                            <div class="insight-box warning">
+                                <h4><i class="fas fa-exclamation"></i> Areas to Improve</h4>
+                                <ul id="concerns-list"></ul>
+                            </div>
+                        </div>
+
+                        <div class="ai-feedback-box">
+                            <h4><i class="fas fa-lightbulb"></i> AI Recruiter Says</h4>
+                            <p id="ai-feedback"></p>
+                        </div>
+
+                        <div class="tips-box">
+                            <h4><i class="fas fa-wand-magic-sparkles"></i> Quick Tips</h4>
+                            <ul id="improvement-tips"></ul>
+                        </div>
+
+                        <div class="bullets-box">
+                            <h4><i class="fas fa-pen-nib"></i> Better Bullet Points</h4>
+                            <ul id="tailored-bullets"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Skills Tab -->
+                    <div class="tab-panel" id="skills-tab">
+                        <div class="skills-header">
+                            <h3>Skill Analysis</h3>
+                            <p>See which skills match and which are missing</p>
+                        </div>
+
+                        <div class="skills-boxes">
+                            <div class="skill-section matching">
+                                <h4><i class="fas fa-check-circle"></i> You Have These</h4>
+                                <div class="tags" id="matching-skills-container"></div>
+                            </div>
+                            <div class="skill-section missing">
+                                <h4><i class="fas fa-times-circle"></i> Work On These</h4>
+                                <div class="tags" id="missing-skills-container"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-categories">
+                            <h4>Skill Breakdown by Category</h4>
+                            <div id="skill-breakdown"></div>
+                        </div>
+                    </div>
+
+                    <!-- ATS Tab -->
+                    <div class="tab-panel" id="ats-tab">
+                        <div class="ats-header">
+                            <h3>ATS Compliance Report</h3>
+                            <p>Will your resume pass automated screening?</p>
+                        </div>
+
+                        <div class="ats-score-display">
+                            <div class="ats-gauge">
+                                <div class="ats-progress" id="ats-progress"></div>
+                            </div>
+                            <p class="ats-percentage"><span id="ats-percentage">0</span>% ATS Compatible</p>
+                        </div>
+
+                        <div class="ats-issues-box">
+                            <h4>Issues Found</h4>
+                            <div id="ats-issues-list"></div>
+                        </div>
+
+                        <div class="ats-tips-box">
+                            <h4><i class="fas fa-wrench"></i> How to Fix</h4>
+                            <ul id="ats-tips-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Strength Tab -->
+                    <div class="tab-panel" id="strength-tab">
+                        <div class="strength-header">
+                            <h3>Resume Quality Audit</h3>
+                            <p>Get insights on your resume's overall strength</p>
+                        </div>
+
+                        <div class="strength-score-display">
+                            <div class="strength-gauge">
+                                <div class="strength-progress" id="strength-progress"></div>
+                            </div>
+                            <p class="strength-percentage"><span id="strength-percentage">0</span>/100</p>
+                        </div>
+
+                        <div class="quality-metrics-box">
+                            <h4>Content Quality Metrics</h4>
+                            <div id="quality-metrics-list"></div>
+                        </div>
+
+                        <div class="missing-box">
+                            <h4><i class="fas fa-plus-circle"></i> Add These Sections</h4>
+                            <ul id="missing-sections-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Interview Tab -->
+                    <div class="tab-panel" id="interview-tab">
+                        <div class="interview-header">
+                            <h3>Interview Preparation</h3>
+                            <p>Get ready for your interview with these insights</p>
+                        </div>
+
+                        <div class="interview-boxes">
+                            <div class="interview-section">
+                                <h4><i class="fas fa-book"></i> Key Topics</h4>
+                                <ul id="interview-topics-list"></ul>
+                            </div>
+
+                            <div class="interview-section">
+                                <h4><i class="fas fa-star"></i> STAR Stories</h4>
+                                <ul id="star-stories-list"></ul>
+                            </div>
+
+                            <div class="interview-section">
+                                <h4><i class="fas fa-handshake"></i> Questions to Ask</h4>
+                                <ul id="questions-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ResumeMate. Crafted with <i class="fas fa-heart"></i> for your success.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
