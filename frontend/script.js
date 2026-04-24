@@ -687,4 +687,25 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
+// Clear All Button Logic to reset the form and UI
+const clearBtn = document.getElementById('clear-btn');
+if (clearBtn) {
+       clearBtn.addEventListener('click', () => {
+                  const jd = document.getElementById('jd');
+                  if (jd) {
+                                 jd.value = '';
+                                 jd.dispatchEvent(new Event('input'));
+                  }
+                  document.getElementById('resume').value = '';
+                  const linkedinUrl = document.getElementById('linkedin-url');
+                  if (linkedinUrl) linkedinUrl.value = '';
+                  document.getElementById('file-name').textContent = 'Drag & drop or click to upload';
+                  document.getElementById('drop-zone').classList.remove('has-file');
+                  document.getElementById('results-panel').style.display = 'none';
+                  document.getElementById('progress-overlay').style.display = 'none';
+                  if (typeof resetSteps === 'function') resetSteps();
+       });
+}
+
+
 console.log('✨ ResumeMate Pro loaded — all features active!');
